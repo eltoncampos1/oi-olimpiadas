@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'SimplonOI';
+  src: url(../font-face/simplonoi-headline.ttf) format("truetype"), url(../font-face/simplonoi-headline.woff2) format("woff2"), url(../font-face/SimplonOi-Headline.eot) format("embedded-opentype"), url(../font-face/SimplonOi-Headline.woff) format("woff"), url(../font-face/simplonoi-headline_1.woff) format("woff"), url(../font-face/simplonoi-headline_1.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'SimplonBP-light';
+  src: url(../font-face/SimplonBP-Light.ttf) format("truetype"), url(../font-face/SimplonBP-Light.woff) format("woff"), url(../font-face/SimplonBP-Light.eot) format("embedded-opentype");
+}
+
+@font-face {
+  font-family: 'SimplonBP-regular';
+  src: url(../font-face/simplonbp-regular.ttf) format("truetype"), url(../font-face/simplonbp-regular-webfont.woff) format("woff"), url(../font-face/simplonbp-regular-webfont.woff2) format("woff2"), url(../font-face/simplonbp-regular.eot) format("embedded-opentype");
+}
+
+@font-face {
+  font-family: 'SimplonBP-medium';
+  src: url(../font-face/SimplonBP-Medium.ttf) format("truetype"), url(../font-face/simplonbp-medium-webfont.woff) format("woff"), url(../font-face/simplonbp-medium-webfont.woff2) format("woff2"), url(../font-face/SimplonBP-Medium.eot) format("embedded-opentype");
+}
+/*# sourceMappingURL=reset.css.map */

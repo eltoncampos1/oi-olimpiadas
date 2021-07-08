@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'SimplonOI';
+  src: url(../font-face/simplonoi-headline.ttf) format("truetype"), url(../font-face/simplonoi-headline.woff2) format("woff2"), url(../font-face/SimplonOi-Headline.eot) format("embedded-opentype"), url(../font-face/SimplonOi-Headline.woff) format("woff"), url(../font-face/simplonoi-headline_1.woff) format("woff"), url(../font-face/simplonoi-headline_1.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: 'SimplonBP-light';
+  src: url(../font-face/SimplonBP-Light.ttf) format("truetype"), url(../font-face/SimplonBP-Light.woff) format("woff"), url(../font-face/SimplonBP-Light.eot) format("embedded-opentype");
+}
+
+@font-face {
+  font-family: 'SimplonBP-regular';
+  src: url(../font-face/simplonbp-regular.ttf) format("truetype"), url(../font-face/simplonbp-regular-webfont.woff) format("woff"), url(../font-face/simplonbp-regular-webfont.woff2) format("woff2"), url(../font-face/simplonbp-regular.eot) format("embedded-opentype");
+}
+
+@font-face {
+  font-family: 'SimplonBP-medium';
+  src: url(../font-face/SimplonBP-Medium.ttf) format("truetype"), url(../font-face/simplonbp-medium-webfont.woff) format("woff"), url(../font-face/simplonbp-medium-webfont.woff2) format("woff2"), url(../font-face/SimplonBP-Medium.eot) format("embedded-opentype");
+}
+
+body {
+  background-color: #fff;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  background-color: #010101;
+}
+
+header {
+  width: 100%;
+  padding-left: 2.81rem;
+  padding-right: 14rem;
+  height: 36.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10.5rem;
+}
+
+.text-box-header {
+  max-width: 310px;
+  width: 100%;
+}
+
+.text-box-header h1 {
+  font-family: 'SimplonOI';
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  color: #fffffe;
+}
+
+.text-box-header h1 span {
+  color: #ffff00;
+}
+
+.text-box-header p {
+  font-family: 'SimplonBP-light';
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #fffffe;
+  padding-left: 2rem;
+  margin-top: 1.25rem;
+}
+
+.athlete-name {
+  max-width: 200px;
+  width: 100%;
+}
+
+.athlete-name h1 {
+  font-family: 'SimplonOI';
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+  color: #ffff00;
+}
+
+.athlete-name h1 span {
+  color: #fffffe;
+}
+
+.bet-container {
+  max-width: 730px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 21.8rem;
+}
+
+.input-box input {
+  max-width: 21.8rem;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #00d318;
+  color: #fffffe;
+  padding-left: 0.6rem;
+  font-family: 'SimplonBP-regular';
+  font-size: 1rem;
+  outline: 0;
+}
+
+.input-box span {
+  color: #00d318;
+  font-family: 'SimplonBP-regular';
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.bet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2.1rem;
+}
+
+.bet h1 {
+  color: #00d318;
+  font-family: 'SimplonBP-medium';
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.first, .second {
+  margin-bottom: 2.5rem;
+}
+
+.change-country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flag {
+  width: 62px;
+  height: 62px;
+  position: relative;
+  border: 1px solid #00d318;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2.25rem;
+}
+
+.flag img {
+  width: 100%;
+}
+
+.flag .place {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #00d318;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -15%;
+  right: -10px;
+  color: #fffffe;
+  font-family: 'SimplonOi';
+  font-size: 1.3rem;
+}
+
+.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 15.6rem;
+}
+
+.select span {
+  font-family: 'SimplonBP-regular';
+  color: #00d318;
+  font-size: 1rem;
+  margin-bottom: .6rem;
+}
+
+.select > div {
+  position: relative;
+}
+
+.select > div img.triangle {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  pointer-events: none;
+}
+
+.select select {
+  max-width: 15.6rem;
+  height: 2.5rem;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #00d318;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: 0;
+  padding-left: .6rem;
+  font-family: 'SimplonBP-regular';
+  font-size: 1rem;
+  color: #fffffe;
+}
+/*# sourceMappingURL=styles.css.map */
