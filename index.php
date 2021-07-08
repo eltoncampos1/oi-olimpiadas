@@ -65,14 +65,23 @@
 
                             <div class="medals-box">
                                 <span>Número de medalhas</span>
-                                <div class="medals">
-                                    <img src="imagens/golden.png" alt="gold medal">
-                                    <input type="number" name="golden" id="gold">
+                                <div>
+                                    <div class="medals">
+                                        <img src="imagens/golden.png" alt="golden medal">
+                                        <input type="number" name="gold" id="gold">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/silver.png" alt="silver medal">
+                                        <input type="number" name="silver" id="silver">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/bronze.png" alt="bronze medal">
+                                        <input type="number" name="bronze" id="bronze">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                     
                      <div class="second">
                         <div class="change-country">
@@ -95,9 +104,19 @@
 
                             <div class="medals-box">
                                 <span>Número de medalhas</span>
-                                <div class="medals">
-                                    <img src="imagens/silver.png" alt="silver medal">
-                                    <input type="number" name="silver" id="silver">
+                                <div>
+                                    <div class="medals">
+                                        <img src="imagens/golden.png" alt="golden medal">
+                                        <input type="number" name="gold" id="gold">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/silver.png" alt="silver medal">
+                                        <input type="number" name="silver" id="silver">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/bronze.png" alt="bronze medal">
+                                        <input type="number" name="bronze" id="bronze">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -122,9 +141,19 @@
 
                             <div class="medals-box">
                                 <span>Número de medalhas</span>
-                                <div class="medals">
-                                    <img src="imagens/bronze.png" alt="bronze medal">
-                                    <input type="number" name="bronze" id="bronze">
+                                <div>
+                                    <div class="medals">
+                                        <img src="imagens/golden.png" alt="golden medal">
+                                        <input type="number" name="gold" id="gold">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/silver.png" alt="silver medal">
+                                        <input type="number" name="silver" id="silver">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/bronze.png" alt="bronze medal">
+                                        <input type="number" name="bronze" id="bronze">
+                                    </div>
                                 </div>
                             </div>
                         </div>

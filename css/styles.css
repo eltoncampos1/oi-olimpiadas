@@ -153,6 +153,10 @@ form {
   outline: 0;
 }
 
+.input-box input[type="text"] {
+  text-transform: uppercase;
+}
+
 .input-box span {
   color: #00d318;
   font-family: 'SimplonBP-regular';
@@ -176,6 +180,23 @@ form {
   font-family: 'SimplonBP-medium';
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.bet button {
+  width: 16.25rem;
+  height: 2.8rem;
+  margin-top: 3.1rem;
+  background: #00d318;
+  color: #fffffe;
+  font-family: 'SimplonBP-medium';
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: uppercase;
 }
 
 .first, .second {
@@ -272,5 +293,54 @@ form {
   font-family: 'SimplonBP-regular';
   font-size: 1rem;
   color: #fffffe;
+}
+
+.medals-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 22.5rem;
+  width: 100%;
+  margin-left: 1.8rem;
+}
+
+.medals-box span {
+  font-family: 'SimplonBP-regular';
+  font-size: 1rem;
+  color: #00d318;
+  margin-bottom: .6rem;
+}
+
+.medals-box > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.medals-box .medals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.medals-box .medals img {
+  margin-right: .8rem;
+}
+
+.medals-box .medals input[type="number"] {
+  width: 60px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #00d318;
+  padding-left: .6rem;
+  outline: 0;
+  font-family: 'SimplonBP-regular';
+  font-size: 1rem;
+  color: #fffffe;
+  margin-right: 1.2rem;
 }
 /*# sourceMappingURL=styles.css.map */
