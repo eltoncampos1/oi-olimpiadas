@@ -49,7 +49,7 @@
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">1</div>
-                                    <img src="imagens/brasil.png" alt="bandeira">
+                                    <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
                             </div>
 
                             <div class="select">
@@ -65,14 +65,23 @@
 
                             <div class="medals-box">
                                 <span>Número de medalhas</span>
-                                <div class="medals">
-                                    <img src="imagens/golden.png" alt="gold medal">
-                                    <input type="number" name="golden" id="gold">
+                                <div>
+                                    <div class="medals">
+                                        <img src="imagens/golden.png" alt="golden medal">
+                                        <input type="number" name="gold" id="gold">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/silver.png" alt="silver medal">
+                                        <input type="number" name="silver" id="silver">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/bronze.png" alt="bronze medal">
+                                        <input type="number" name="bronze" id="bronze">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                     
                      <div class="second">
                         <div class="change-country">
@@ -80,7 +89,7 @@
                                 <div class="place">
                                     2
                                 </div>
-                                <img src="imagens/brasil.png" alt="bandeira">
+                                <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
                             </div>  
 
                             <div class="select">
@@ -95,9 +104,19 @@
 
                             <div class="medals-box">
                                 <span>Número de medalhas</span>
-                                <div class="medals">
-                                    <img src="imagens/silver.png" alt="silver medal">
-                                    <input type="number" name="silver" id="silver">
+                                <div>
+                                    <div class="medals">
+                                        <img src="imagens/golden.png" alt="golden medal">
+                                        <input type="number" name="gold" id="gold">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/silver.png" alt="silver medal">
+                                        <input type="number" name="silver" id="silver">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/bronze.png" alt="bronze medal">
+                                        <input type="number" name="bronze" id="bronze">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +126,7 @@
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">3</div>
-                                <img src="imagens/brasil.png" alt="bandeira">
+                                <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
                             </div>   
 
                             <div class="select">
@@ -122,9 +141,19 @@
 
                             <div class="medals-box">
                                 <span>Número de medalhas</span>
-                                <div class="medals">
-                                    <img src="imagens/bronze.png" alt="bronze medal">
-                                    <input type="number" name="bronze" id="bronze">
+                                <div>
+                                    <div class="medals">
+                                        <img src="imagens/golden.png" alt="golden medal">
+                                        <input type="number" name="gold" id="gold">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/silver.png" alt="silver medal">
+                                        <input type="number" name="silver" id="silver">
+                                    </div>
+                                    <div class="medals">
+                                        <img src="imagens/bronze.png" alt="bronze medal">
+                                        <input type="number" name="bronze" id="bronze">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +162,48 @@
                     <button type="button">
                         Enviar Meu Palpite
                     </button>
+
                 </div>
+            </div>
+        </section>
+
+
+        <section class="ranking">
+            <div class="ranking-description">
+                <h1>
+                    Ranking
+                </h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non voluptas soluta culpa. Recusandae ut odit facere animi enim dignissimos quasi tempore!</p>
+            </div>
+
+            <div class="cooperator-ranking">
+                <ul>
+                    <li>
+                        <img src="imagens/ouro2.png" alt="Golden medal">
+                        Nome do colaborador
+                    </li>
+                    <li>
+                        <img src="imagens/prata2.png" alt="silver medal">
+                         Nome do colaborador
+                    </li>
+                    <li>
+                        <img src="imagens/bronze2.png" alt="bronze medal">
+                         Nome do colaborador
+                    </li>
+                    <li>
+                       <div>
+                          <span> 4</span>
+                       </div>
+                         Nome do colaborador
+                    </li>
+                    <li>
+                        <div>
+                            <span>5</span>
+                        </div>
+                         Nome do colaborador
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
