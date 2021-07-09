@@ -10,8 +10,10 @@ main {
     height: 100%;
     max-width: 920px;
     margin: 0 auto;
-    background-color: #010101;
 
+    background-image: url(../imagens/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -47,15 +49,22 @@ header {
     }
 }
 
+.wave {
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
 .athlete-name {
     max-width: 200px;
     width: 100%;
 
     h1 {
-        @include text(1.5rem, 1.3rem,  $yellow);
+        @include text(1.5rem, 1.7rem,  $yellow);
 
         span {
             color: $white;
+            margin-left: .9rem;
         }
     }
 }
@@ -92,6 +101,10 @@ form {
 
         font-size: 1rem;
         outline: 0;
+
+        &:focus {
+            box-shadow: 0px 0px 7px $green;
+        }
 
     }
 
@@ -137,6 +150,12 @@ form {
         outline: none;
         align-self: center;
         text-transform: uppercase;
+        transition: filter .2s;
+
+        &:hover {
+            filter: brightness(0.7);
+            // box-shadow: 0px 0px 15px $green;
+        }
     }
 }
 
@@ -158,6 +177,8 @@ form {
     display: flex;
     margin-right: 2.25rem;
 
+    box-shadow: 0px 0px 170px .5px $green;
+
     img {
         width: 100%;
     }
@@ -176,6 +197,8 @@ form {
         color: $white;
         font-family: 'SimplonOi';
         font-size: 1.3rem;
+
+        box-shadow: 0px 0px 10px $green;
     }
 }
 
@@ -219,6 +242,10 @@ form {
         font-family: 'SimplonBP-regular';
         font-size: 1rem;
         color: $white;
+
+        &:focus {
+            box-shadow: 0px 0px 7px $green;
+        }
     }
 }
 
@@ -265,8 +292,289 @@ form {
             color: $white;
 
             margin-right: 1.2rem;
+
+            -moz-appearance:textfield;
+
+            &:focus {
+                box-shadow: 0px 0px 7px $green;
+            }
+
+            &:last-child() {
+                margin-right: 0px !important;
+            }
+
         }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0; 
+        }
+
     }
 
 
+}
+
+// ================= Ranking ========================
+
+.ranking {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0  5.9rem;
+    margin-top: 22.5rem;
+}
+
+.ranking-description {
+    max-width: 18.75rem;
+    width: 100%;
+
+    h1 {
+        @include text(2.5rem, 2.5rem, $yellow);
+    }
+
+    p {
+        font-family: 'SimplonBP-light'; 
+        font-size: 1.375rem;
+        line-height: 1.8rem;
+        margin-top: 1rem;
+        
+        color: $white;
+        padding-left: 2.6rem;
+        text-transform: uppercase;
+    }
+}
+
+.cooperator-ranking {
+    max-width: 23.75rem;
+    width: 100%;
+    margin-bottom: 8.75rem;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        li {
+            color: $green;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-family: 'SimplonBP-regular';
+            font-size: 1.25rem;
+            text-transform: uppercase;
+
+            background-image: url(../imagens/bg.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            img, div {
+                margin-bottom: 0.8rem;
+                margin-top: 0.8rem;
+                margin-left: 0.2rem;
+                margin-right: 1.125rem;
+            }
+
+
+            div {
+                width: 35px;
+                height: 35px;
+
+                border-radius: 50%;
+                border: 1px solid $green;
+                background: transparent;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            span {
+                font-family: 'SimplonOI';
+                font-size: 1.125rem;
+            }
+
+            &:hover {
+                box-shadow: 0px 0px 5px $green;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+   header {
+       padding-right: 5rem;
+   }
+
+   form {
+       padding: 0 2rem;
+   }
+
+   .bet  {
+       margin: 0 2rem;
+
+       h1 {
+           margin-top: 1rem;
+       }
+   }
+
+   .input-box input {
+       width: 95%;
+   }
+
+   .flag {
+        width: 55px;
+        height: 50px;
+
+        .place {
+            width: 28px;
+            height: 28px;
+        }
+   }
+
+
+   .ranking {
+       padding: 0 3rem;
+       margin-top: 19rem;
+   }
+
+   .ranking-description{
+       margin-right: 2rem;
+   }
+
+}
+
+
+@media (max-width: 690px) {
+    .change-country {
+        flex-direction: column;
+    }
+
+    .select {
+        margin-bottom: 1rem;
+    }
+
+
+       .flag {
+        width: 70px;
+        height: 70px;
+
+        .place {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+     .select {
+         width: 22.5rem;
+
+        select {
+            max-width: 22.5rem;
+        }
+    }
+
+    .medals-box{
+        margin-left: 0;
+
+        span {
+            margin-top: .8rem;
+        }
+    }
+
+    main {
+        background: url(../imagens/bg-mobile3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .ranking {
+        margin-top: 14rem;
+    }
+}
+
+@media (max-width: 560px) {
+    form {
+        flex-direction: column;
+
+    }
+
+    .bet {
+        align-items: center;
+        margin: 0 3rem;
+
+        h1 {
+            margin: 2.5rem 0;
+        }
+    }
+
+    .input-box {
+        margin-bottom: 2rem;
+    }
+
+    .athlete-name {
+       margin-right: -3rem;
+       margin-bottom: -2rem;
+    }
+
+    .text-box-header p {
+        padding-left: 0;
+    }
+
+    .ranking {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10rem;
+    }
+
+    .ranking-description {
+
+        margin-bottom: 2rem;
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            padding-left: 0px;
+        }
+    }
+}
+
+
+@media (max-width: 515px) {
+    main {
+        background-size: contain;
+    }
+
+    .ranking {
+        background-image: url(../imagens/bg-mobile2.png);
+        padding-top: 10rem;
+        margin-top:0;
+    }
+
+    .athlete-name {
+        transform: translate3d(1rem, -5rem,0);
+    }
+}
+
+@media (max-width: 425px) {
+    .bet {
+        margin: 0;
+    }
+
+    .medals-box {
+        transform: translateX(-1rem);
+    }
+
+    header {
+        flex-direction: column-reverse;
+    }
+
+
+    .athlete-name {
+        display: none;
+    }
 }

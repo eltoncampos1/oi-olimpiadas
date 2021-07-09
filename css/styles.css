@@ -17,6 +17,26 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+ul, li {
+  list-style: none;
+}
+
+body {
+  background-color: #000100;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 90.5%;
+  }
+}
+
 @font-face {
   font-family: 'SimplonOI';
   src: url(../font-face/simplonoi-headline.ttf) format("truetype"), url(../font-face/simplonoi-headline.woff2) format("woff2"), url(../font-face/SimplonOi-Headline.eot) format("embedded-opentype"), url(../font-face/SimplonOi-Headline.woff) format("woff"), url(../font-face/simplonoi-headline_1.woff) format("woff"), url(../font-face/simplonoi-headline_1.woff2) format("woff2");
@@ -46,7 +66,9 @@ main {
   height: 100%;
   max-width: 920px;
   margin: 0 auto;
-  background-color: #010101;
+  background-image: url(../imagens/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
@@ -91,6 +113,12 @@ header {
   margin-top: 1.25rem;
 }
 
+.wave {
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
 .athlete-name {
   max-width: 200px;
   width: 100%;
@@ -99,12 +127,13 @@ header {
 .athlete-name h1 {
   font-family: 'SimplonOI';
   font-size: 1.5rem;
-  line-height: 1.3rem;
+  line-height: 1.7rem;
   color: #ffff00;
 }
 
 .athlete-name h1 span {
   color: #fffffe;
+  margin-left: .9rem;
 }
 
 .bet-container {
@@ -153,6 +182,11 @@ form {
   outline: 0;
 }
 
+.input-box input:focus {
+  -webkit-box-shadow: 0px 0px 7px #00d318;
+          box-shadow: 0px 0px 7px #00d318;
+}
+
 .input-box input[type="text"] {
   text-transform: uppercase;
 }
@@ -197,6 +231,15 @@ form {
       -ms-grid-row-align: center;
       align-self: center;
   text-transform: uppercase;
+  -webkit-transition: -webkit-filter .2s;
+  transition: -webkit-filter .2s;
+  transition: filter .2s;
+  transition: filter .2s, -webkit-filter .2s;
+}
+
+.bet button:hover {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
 }
 
 .first, .second {
@@ -222,6 +265,8 @@ form {
   display: -ms-flexbox;
   display: flex;
   margin-right: 2.25rem;
+  -webkit-box-shadow: 0px 0px 170px 0.5px #00d318;
+          box-shadow: 0px 0px 170px 0.5px #00d318;
 }
 
 .flag img {
@@ -248,6 +293,8 @@ form {
   color: #fffffe;
   font-family: 'SimplonOi';
   font-size: 1.3rem;
+  -webkit-box-shadow: 0px 0px 10px #00d318;
+          box-shadow: 0px 0px 10px #00d318;
 }
 
 .select {
@@ -293,6 +340,11 @@ form {
   font-family: 'SimplonBP-regular';
   font-size: 1rem;
   color: #fffffe;
+}
+
+.select select:focus {
+  -webkit-box-shadow: 0px 0px 7px #00d318;
+          box-shadow: 0px 0px 7px #00d318;
 }
 
 .medals-box {
@@ -342,5 +394,277 @@ form {
   font-size: 1rem;
   color: #fffffe;
   margin-right: 1.2rem;
+  -moz-appearance: textfield;
+}
+
+.medals-box .medals input[type="number"]:focus {
+  -webkit-box-shadow: 0px 0px 7px #00d318;
+          box-shadow: 0px 0px 7px #00d318;
+}
+
+.medals-box .medals input[type="number"]:last-child() {
+  margin-right: 0px !important;
+}
+
+.medals-box .medals input::-webkit-outer-spin-button,
+.medals-box .medals input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ranking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0  5.9rem;
+  margin-top: 22.5rem;
+}
+
+.ranking-description {
+  max-width: 18.75rem;
+  width: 100%;
+}
+
+.ranking-description h1 {
+  font-family: 'SimplonOI';
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: #ffff00;
+}
+
+.ranking-description p {
+  font-family: 'SimplonBP-light';
+  font-size: 1.375rem;
+  line-height: 1.8rem;
+  margin-top: 1rem;
+  color: #fffffe;
+  padding-left: 2.6rem;
+  text-transform: uppercase;
+}
+
+.cooperator-ranking {
+  max-width: 23.75rem;
+  width: 100%;
+  margin-bottom: 8.75rem;
+}
+
+.cooperator-ranking ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.cooperator-ranking ul li {
+  color: #00d318;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'SimplonBP-regular';
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  background-image: url(../imagens/bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.cooperator-ranking ul li img, .cooperator-ranking ul li div {
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
+  margin-left: 0.2rem;
+  margin-right: 1.125rem;
+}
+
+.cooperator-ranking ul li div {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #00d318;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cooperator-ranking ul li span {
+  font-family: 'SimplonOI';
+  font-size: 1.125rem;
+}
+
+.cooperator-ranking ul li:hover {
+  -webkit-box-shadow: 0px 0px 5px #00d318;
+          box-shadow: 0px 0px 5px #00d318;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-right: 5rem;
+  }
+  form {
+    padding: 0 2rem;
+  }
+  .bet {
+    margin: 0 2rem;
+  }
+  .bet h1 {
+    margin-top: 1rem;
+  }
+  .input-box input {
+    width: 95%;
+  }
+  .flag {
+    width: 55px;
+    height: 50px;
+  }
+  .flag .place {
+    width: 28px;
+    height: 28px;
+  }
+  .ranking {
+    padding: 0 3rem;
+    margin-top: 19rem;
+  }
+  .ranking-description {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .change-country {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .select {
+    margin-bottom: 1rem;
+  }
+  .flag {
+    width: 70px;
+    height: 70px;
+  }
+  .flag .place {
+    width: 35px;
+    height: 35px;
+  }
+  .select {
+    width: 22.5rem;
+  }
+  .select select {
+    max-width: 22.5rem;
+  }
+  .medals-box {
+    margin-left: 0;
+  }
+  .medals-box span {
+    margin-top: .8rem;
+  }
+  main {
+    background: url(../imagens/bg-mobile3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ranking {
+    margin-top: 14rem;
+  }
+}
+
+@media (max-width: 560px) {
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bet {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 3rem;
+  }
+  .bet h1 {
+    margin: 2.5rem 0;
+  }
+  .input-box {
+    margin-bottom: 2rem;
+  }
+  .athlete-name {
+    margin-right: -3rem;
+    margin-bottom: -2rem;
+  }
+  .text-box-header p {
+    padding-left: 0;
+  }
+  .ranking {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10rem;
+  }
+  .ranking-description {
+    margin-bottom: 2rem;
+  }
+  .ranking-description h1 {
+    margin-bottom: 1rem;
+  }
+  .ranking-description p {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 515px) {
+  main {
+    background-size: contain;
+  }
+  .ranking {
+    background-image: url(../imagens/bg-mobile2.png);
+    padding-top: 10rem;
+    margin-top: 0;
+  }
+  .athlete-name {
+    -webkit-transform: translate3d(1rem, -5rem, 0);
+            transform: translate3d(1rem, -5rem, 0);
+  }
+}
+
+@media (max-width: 425px) {
+  .bet {
+    margin: 0;
+  }
+  .medals-box {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .athlete-name {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -16,6 +16,27 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+ul , li {
+    list-style: none;
+}
+
+body {
+    background-color: #000100;
+}
+
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 90.5%;
+    }
+}
+
 
 
 

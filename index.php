@@ -49,7 +49,7 @@
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">1</div>
-                                    <img src="imagens/brasil.png" alt="bandeira">
+                                    <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
                             </div>
 
                             <div class="select">
@@ -89,7 +89,7 @@
                                 <div class="place">
                                     2
                                 </div>
-                                <img src="imagens/brasil.png" alt="bandeira">
+                                <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
                             </div>  
 
                             <div class="select">
@@ -126,7 +126,7 @@
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">3</div>
-                                <img src="imagens/brasil.png" alt="bandeira">
+                                <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
                             </div>   
 
                             <div class="select">
@@ -162,7 +162,48 @@
                     <button type="button">
                         Enviar Meu Palpite
                     </button>
+
                 </div>
+            </div>
+        </section>
+
+
+        <section class="ranking">
+            <div class="ranking-description">
+                <h1>
+                    Ranking
+                </h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non voluptas soluta culpa. Recusandae ut odit facere animi enim dignissimos quasi tempore!</p>
+            </div>
+
+            <div class="cooperator-ranking">
+                <ul>
+                    <li>
+                        <img src="imagens/ouro2.png" alt="Golden medal">
+                        Nome do colaborador
+                    </li>
+                    <li>
+                        <img src="imagens/prata2.png" alt="silver medal">
+                         Nome do colaborador
+                    </li>
+                    <li>
+                        <img src="imagens/bronze2.png" alt="bronze medal">
+                         Nome do colaborador
+                    </li>
+                    <li>
+                       <div>
+                          <span> 4</span>
+                       </div>
+                         Nome do colaborador
+                    </li>
+                    <li>
+                        <div>
+                            <span>5</span>
+                        </div>
+                         Nome do colaborador
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
