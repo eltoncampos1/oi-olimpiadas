@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,19 @@
     <link rel="stylesheet" href="css/reset.css">
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <header>
             <div class="text-box-header">
-            <h1>lorem Ipsum
-                <span>Dolor sit amet</span>
-            </h1>
+                <h1>lorem Ipsum
+                    <span>Dolor sit amet</span>
+                </h1>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quis. Rem ea dolores inventore consequatur nostrum distinctio explicabo ratione reprehenderit temporibus amet! Ducimus, possimus sunt.
-            </p>
-        </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quis. Rem ea dolores inventore consequatur nostrum distinctio explicabo ratione reprehenderit temporibus amet! Ducimus, possimus sunt.
+                </p>
+            </div>
 
             <div class="athlete-name">
                 <h1>
@@ -34,11 +36,11 @@
                 <form>
                     <div class="input-box">
                         <span>Nome completo*</span>
-                        <input type="text" name="nome" id="nome"/>
+                        <input type="text" name="nome" id="nome" />
                     </div>
                     <div class="input-box">
                         <span>E-mail*</span>
-                        <input type="email" name="email" id="email"/>
+                        <input type="email" name="email" id="email" />
                     </div>
                 </form>
 
@@ -49,7 +51,7 @@
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">1</div>
-                                    <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
+                                <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
                             </div>
 
                             <div class="select">
@@ -82,15 +84,15 @@
                             </div>
                         </div>
                     </div>
-                    
-                     <div class="second">
+
+                    <div class="second">
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">
                                     2
                                 </div>
                                 <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
-                            </div>  
+                            </div>
 
                             <div class="select">
                                 <span>País</span>
@@ -122,12 +124,12 @@
                         </div>
                     </div>
 
-                     <div class="third">
+                    <div class="third">
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">3</div>
                                 <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
-                            </div>   
+                            </div>
 
                             <div class="select">
                                 <span>País</span>
@@ -168,7 +170,7 @@
         </section>
 
 
-        <section class="ranking">
+        <section class="ranking main">
             <div class="ranking-description">
                 <h1>
                     Ranking
@@ -185,27 +187,28 @@
                     </li>
                     <li>
                         <img src="imagens/prata2.png" alt="silver medal">
-                         Nome do colaborador
+                        Nome do colaborador
                     </li>
                     <li>
                         <img src="imagens/bronze2.png" alt="bronze medal">
-                         Nome do colaborador
+                        Nome do colaborador
                     </li>
                     <li>
-                       <div>
-                          <span> 4</span>
-                       </div>
-                         Nome do colaborador
+                        <div>
+                            <span> 4</span>
+                        </div>
+                        Nome do colaborador
                     </li>
                     <li>
                         <div>
                             <span>5</span>
                         </div>
-                         Nome do colaborador
+                        Nome do colaborador
                     </li>
                 </ul>
             </div>
         </section>
     </main>
 </body>
+
 </html>
