@@ -340,6 +340,7 @@ form {
   font-family: 'SimplonBP-regular';
   font-size: 1rem;
   color: #fffffe;
+  background: #000100;
 }
 
 .select select:focus {
