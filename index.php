@@ -76,7 +76,7 @@ $paises = $db->recuperar();
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">1</div>
-                                <img src="https://www.countryflags.io/af/flat/64.png" alt="bandeira">
+                                <img src="" id="bandeira1" alt="bandeira">
                             </div>
 
                             <div class="select">
@@ -85,22 +85,22 @@ $paises = $db->recuperar();
 
                                     <img class="triangle" src="imagens/triangle.png" alt="triangle">
 
-                                    <select name="país" id="primary-pais">
+                                    <select name="país" id="primary-pais" onchange="primeiraImg(this.value)">
                                         <option value="">Escolha um pais</option>
                                         <?php
                                         foreach ($paises as $index => $pais) { ?>
-                                            
-                                            <option value="<?php echo $pais->url_imagem ?>" value="<?php echo $pais->nome ?>"><?php echo $pais->nome ?></option>
-                                            
+
+                                            <option value="<?php echo $pais->url_imagem ?>"><?php echo $pais->nome ?></option>
+
                                         <?php
-                                        }                                        
+                                        }
                                         ?>
                                     </select>
 
-                                    
+
                                 </div>
                             </div>
-                            
+
                             <div class="medals-box">
                                 <span>Número de medalhas</span>
                                 <div>
@@ -127,17 +127,18 @@ $paises = $db->recuperar();
                                 <div class="place">
                                     2
                                 </div>
+                                <img src="" id="bandeira2" alt="bandeira">
                             </div>
 
                             <div class="select">
                                 <span>País</span>
                                 <div>
                                     <img class="triangle" src="imagens/triangle.png" alt="triangle">
-                                    <select name="país" id="secondary-pais">
+                                    <select name="país" id="secondary-pais" onchange="segundaImg(this.value)">
                                         <option value="brasil">Escolha um pais</option>
                                         <?php
                                         foreach ($paises as $index => $pais) { ?>
-                                            <option value="<?php echo $pais->nome ?>"><?php echo $pais->nome ?></option>
+                                            <option value="<?php echo $pais->url_imagem ?>"><?php echo $pais->nome ?></option>
                                         <?php
                                         }
                                         ?>
@@ -169,18 +170,18 @@ $paises = $db->recuperar();
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">3</div>
-                                <!-- <img src="imagens/brasil.png" alt="bandeira"> -->
+                                <img src="" id="bandeira3" alt="bandeira">
                             </div>
 
                             <div class="select">
                                 <span>País</span>
                                 <div>
                                     <img class="triangle" src="imagens/triangle.png" alt="triangle">
-                                    <select name="país" id="tertiary-pais">
+                                    <select name="país" id="tertiary-pais" onchange="terceiraImg(this.value)">
                                         <option value="brasil">Escolha um pais</option>
                                         <?php
                                         foreach ($paises as $index => $pais) { ?>
-                                            <option value="<?php echo $pais->nome ?>"><?php echo $pais->nome ?></option>
+                                            <option value="<?php echo $pais->url_imagem ?>"><?php echo $pais->nome ?></option>
                                         <?php
                                         }
                                         ?>
@@ -257,5 +258,15 @@ $paises = $db->recuperar();
         </section>
     </main>
 </body>
-
+<script>
+    function primeiraImg(value){        
+        document.getElementById("bandeira1").src=value;    
+    }
+    function segundaImg(value){        
+        document.getElementById("bandeira2").src=value;    
+    }
+    function terceiraImg(value){        
+        document.getElementById("bandeira3").src=value;    
+    }
+</script>
 </html>
