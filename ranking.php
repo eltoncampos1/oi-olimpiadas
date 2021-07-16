@@ -26,7 +26,7 @@
 
             <div class="athlete-name">
                 <h1>
-                    Medina, <br>
+                    Italo Ferreira, <br>
                     <span>Atleta de fibra</span>
                 </h1>
             </div>
