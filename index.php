@@ -37,12 +37,12 @@ $paises = $db->recuperar();
     <main>
         <header>
             <div class="text-box-header">
-                <h1>lorem Ipsum
-                    <span>Dolor sit amet</span>
+                <h1>GENTE DE <br> FIBRA, VIBRA.<br>
+                    <span>E TORCE JUNTO!</span>
                 </h1>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, quis. Rem ea dolores inventore consequatur nostrum distinctio explicabo ratione reprehenderit temporibus amet! Ducimus, possimus sunt.
+                    Enquanto nossos atletas vão disputar a maior competição do mundo, você está convocado pra participar do nosso bolão. Tudo o que precisa fazer é montar o seu ranking com os países e as respectivas medalhas. Depois é só torcer pra que seu palpite esteja certo.
                 </p>
             </div>
 
@@ -76,7 +76,7 @@ $paises = $db->recuperar();
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">1</div>
-                                <img src="" id="bandeira1" alt="bandeira">
+                                <img src="imagens/default.png" id="bandeira1" alt="bandeira">
                             </div>
 
                             <div class="select">
@@ -127,7 +127,7 @@ $paises = $db->recuperar();
                                 <div class="place">
                                     2
                                 </div>
-                                <img src="" id="bandeira2" alt="bandeira">
+                                <img src="imagens/default.png" id="bandeira2" alt="bandeira">
                             </div>
 
                             <div class="select">
@@ -170,7 +170,7 @@ $paises = $db->recuperar();
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">3</div>
-                                <img src="" id="bandeira3" alt="bandeira">
+                                <img src="imagens/default.png" id="bandeira3" alt="bandeira">
                             </div>
 
                             <div class="select">
@@ -219,54 +219,71 @@ $paises = $db->recuperar();
 
 
         <section class="ranking main">
-            <div class="ranking-description">
+            <div class="athlete-name footer">
                 <h1>
-                    Ranking
+                    leticia bufoni, <br>
+                    <span>Atleta de fibra</span>
                 </h1>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non voluptas soluta culpa. Recusandae ut odit facere animi enim dignissimos quasi tempore!</p>
             </div>
+            <div class="ranking-box">
+                <div class="ranking-description">
+                    <h1>
+                        Ranking
+                    </h1>
 
-            <div class="cooperator-ranking">
-                <ul>
-                    <li>
-                        <img src="imagens/ouro2.png" alt="Golden medal">
-                        Nome do colaborador
-                    </li>
-                    <li>
-                        <img src="imagens/prata2.png" alt="silver medal">
-                        Nome do colaborador
-                    </li>
-                    <li>
-                        <img src="imagens/bronze2.png" alt="bronze medal">
-                        Nome do colaborador
-                    </li>
-                    <li>
-                        <div>
-                            <span> 4</span>
-                        </div>
-                        Nome do colaborador
-                    </li>
-                    <li>
-                        <div>
-                            <span>5</span>
-                        </div>
-                        Nome do colaborador
-                    </li>
-                </ul>
+                    <p>Tem muita competição pela frente. Boa sorte pra você e para os brasileiros na disputa.</p>
+                </div>
+
+                <div class="cooperator-ranking">
+                    <ul>
+                        <li>
+                            <div class="pod">
+                                <span>1°</span>
+                            </div>
+                            Nome do colaborador
+                        </li>
+                        <li>
+                            <div class="pod">
+                                <span>2°</span>
+                            </div>
+                            Nome do colaborador
+                        </li>
+                        <li>
+                            <div class="pod">
+                                <span>3°</span>
+                            </div>
+                            Nome do colaborador
+                        </li>
+                        <li>
+                            <div>
+                                <span> 4°</span>
+                            </div>
+                            Nome do colaborador
+                        </li>
+                        <li>
+                            <div>
+                                <span>5°</span>
+                            </div>
+                            Nome do colaborador
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 </body>
 <script>
-    function primeiraImg(value){        
-        document.getElementById("bandeira1").src=value;    
+    function primeiraImg(value) {
+        document.getElementById("bandeira1").src = value;
     }
-    function segundaImg(value){        
-        document.getElementById("bandeira2").src=value;    
+
+    function segundaImg(value) {
+        document.getElementById("bandeira2").src = value;
     }
-    function terceiraImg(value){        
-        document.getElementById("bandeira3").src=value;    
+
+    function terceiraImg(value) {
+        document.getElementById("bandeira3").src = value;
     }
 </script>
+
 </html>

@@ -66,7 +66,7 @@ main {
   height: 100%;
   max-width: 920px;
   margin: 0 auto;
-  background-image: url(../imagens/background.png);
+  background-image: url(../imagens/form-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -340,7 +340,7 @@ form {
   font-family: 'SimplonBP-regular';
   font-size: 1rem;
   color: #fffffe;
-  background: #000100;
+  background: #000300;
 }
 
 .select select:focus {
@@ -414,20 +414,50 @@ form {
 }
 
 .ranking {
+  width: 100%;
+  padding: 0  5.9rem;
+  margin-top: 22.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0  5.9rem;
-  margin-top: 22.5rem;
+}
+
+.ranking .ranking-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 22rem;
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.ranking .athlete-name.footer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 6rem;
+  margin-top: 5rem;
+}
+
+.ranking .athlete-name.footer h1 {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 
 .ranking-description {
   max-width: 18.75rem;
   width: 100%;
+  margin-right: 3rem;
 }
 
 .ranking-description h1 {
@@ -435,20 +465,19 @@ form {
   font-size: 2.5rem;
   line-height: 2.5rem;
   color: #ffff00;
+  margin-left: -2rem;
 }
 
 .ranking-description p {
   font-family: 'SimplonBP-light';
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   line-height: 1.8rem;
-  margin-top: 1rem;
   color: #fffffe;
-  padding-left: 2.6rem;
   text-transform: uppercase;
 }
 
 .cooperator-ranking {
-  max-width: 23.75rem;
+  max-width: 22rem;
   width: 100%;
   margin-bottom: 8.75rem;
 }
@@ -481,7 +510,7 @@ form {
   background-position: bottom;
 }
 
-.cooperator-ranking ul li img, .cooperator-ranking ul li div {
+.cooperator-ranking ul li div {
   margin-bottom: 0.8rem;
   margin-top: 0.8rem;
   margin-left: 0.2rem;
@@ -505,9 +534,19 @@ form {
           justify-content: center;
 }
 
+.cooperator-ranking ul li .pod {
+  background-color: #00d318;
+}
+
+.cooperator-ranking ul li .pod span {
+  color: #061303;
+}
+
 .cooperator-ranking ul li span {
   font-family: 'SimplonOI';
   font-size: 1.125rem;
+  margin-left: .3rem;
+  margin-top: .2rem;
 }
 
 .cooperator-ranking ul li:hover {
@@ -585,6 +624,18 @@ form {
   }
   .ranking {
     margin-top: 14rem;
+    background: url(../imagens/form-bg-ranking.png);
+    background-size: cover;
+  }
+  .ranking .ranking-box {
+    padding-left: 0px;
+  }
+  .ranking .athlete-name.footer {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+    margin-left: 0;
+    margin-top: 0;
   }
 }
 
@@ -616,12 +667,15 @@ form {
   }
   .ranking {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 10rem;
   }
   .ranking-description {
@@ -632,6 +686,9 @@ form {
   }
   .ranking-description p {
     padding-left: 0px;
+  }
+  .athlete-name.footer {
+    margin-bottom: 4rem;
   }
 }
 
@@ -647,6 +704,12 @@ form {
   .athlete-name {
     -webkit-transform: translate3d(1rem, -5rem, 0);
             transform: translate3d(1rem, -5rem, 0);
+  }
+  .ranking {
+    margin-top: 14rem;
+    background: url(../imagens/form-bg-ranking.png);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
