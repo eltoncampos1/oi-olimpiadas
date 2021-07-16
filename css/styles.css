@@ -43,6 +43,11 @@ body {
 }
 
 @font-face {
+  font-family: 'SimplonBP-bold';
+  src: url(../font-face/SimplonBP-Bold.ttf) format("truetype"), url(../font-face/simplonbp-bold.woff) format("woff"), url(../font-face/simplonbp-bold.woff2) format("woff2"), url(../font-face/SimplonBP-Bold.eot) format("embedded-opentype");
+}
+
+@font-face {
   font-family: 'SimplonBP-light';
   src: url(../font-face/SimplonBP-Light.ttf) format("truetype"), url(../font-face/SimplonBP-Light.woff) format("woff"), url(../font-face/SimplonBP-Light.eot) format("embedded-opentype");
 }
@@ -947,6 +952,312 @@ form {
   }
   .ranking-bg .deadline {
     margin-top: 5rem;
+  }
+}
+
+.result-page {
+  background-image: url(../imagens/result-bg.png);
+}
+
+.result-page header {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 12rem;
+  padding-right: 1.5rem;
+  padding-left: 15rem;
+}
+
+.result-page .final-podium {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10.5rem;
+  position: relative;
+}
+
+.result-page .final-podium .podium-image {
+  max-width: 43rem;
+}
+
+.result-page .final-podium .podium-image img {
+  width: 100%;
+}
+
+.result-page .final-podium .ranking-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 12.5rem;
+}
+
+.result-page .final-podium .ranking-container .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-right: 2px solid #000;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.result-page .final-podium .ranking-container .column:last-child {
+  border-right: 2px solid transparent;
+}
+
+.result-page .final-podium .ranking-container .column .medals-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.result-page .final-podium .ranking-container .column .medals-wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1rem;
+}
+
+.result-page .final-podium .ranking-container .column .medals-wrapper div span {
+  font-family: 'SimplonBP-light';
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #fffffe;
+  margin-left: .6rem;
+}
+
+.result-page .final-podium .ranking-container .column .medals-wrapper div:first-child {
+  margin-left: 0;
+}
+
+.result-page .final-podium .place-wrapper {
+  margin-bottom: 2.25rem;
+}
+
+.result-page .final-podium .place-wrapper .ctry {
+  font-family: 'SimplonBP-bold';
+  color: #fffffe;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.result-page .final-podium .place-1 {
+  position: absolute;
+  font-family: 'SimplonBP-regular';
+  color: #00d318;
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  top: -10%;
+  left: 41%;
+}
+
+.result-page .final-podium .place-2 {
+  position: absolute;
+  font-family: 'SimplonBP-regular';
+  color: #00d318;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  top: 2%;
+  left: 20%;
+}
+
+.result-page .final-podium .place-3 {
+  position: absolute;
+  font-family: 'SimplonBP-regular';
+  color: #00d318;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  top: 7%;
+  right: 20%;
+}
+
+@media (max-width: 768px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  header .athlete-name {
+    margin-top: 2rem;
+    margin-left: -5rem;
+  }
+  header .athlete-name h1 {
+    font-size: 1.2rem;
+  }
+  header .text-box-header {
+    margin-left: 5rem;
+  }
+  .place-1 {
+    top: -10%;
+    left: 38% !important;
+  }
+  .place-2 {
+    top: 2%;
+    left: 15% !important;
+  }
+  .place-3 {
+    top: 7%;
+    right: 15% !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .place-1 {
+    top: -10%;
+    left: 37% !important;
+  }
+  .place-2 {
+    top: 2%;
+    left: 11.5% !important;
+  }
+  .place-3 {
+    top: 7%;
+    right: 11.5% !important;
+  }
+}
+
+@media (max-width: 625px) {
+  .text-box-header {
+    margin-left: 1rem !important;
+  }
+  .final-podium {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  .ctry {
+    font-size: 1.2rem !important;
+  }
+  .medals-wrapper span {
+    font-size: 1rem !important;
+    margin-left: .3rem !important;
+  }
+  .column {
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+  }
+  .place-1 {
+    top: -8% !important;
+    left: 37% !important;
+    font-size: 1.3rem !important;
+    line-height: 1.3rem !important;
+  }
+  .place-2 {
+    top: 2% !important;
+    left: 7% !important;
+    font-size: 1.1rem !important;
+    line-height: 1.1rem !important;
+  }
+  .place-3 {
+    top: 6% !important;
+    right: 9% !important;
+    font-size: 1.1rem !important;
+    line-height: 1.1rem !important;
+  }
+}
+
+@media (max-width: 515px) {
+  main.result-page {
+    background-size: cover !important;
+  }
+  .column {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+  .medals-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .medals-wrapper div {
+    margin-left: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  .place-1 {
+    top: -5% !important;
+    left: 37% !important;
+    font-size: 1.3rem !important;
+    line-height: 1.3rem !important;
+  }
+  .place-2 {
+    top: .5% !important;
+    left: 7% !important;
+    font-size: 1.1rem !important;
+    line-height: 1.1rem !important;
+  }
+  .place-3 {
+    top: 3% !important;
+    right: 9% !important;
+    font-size: 1.1rem !important;
+    line-height: 1.1rem !important;
+  }
+  .athlete-name {
+    display: none;
+  }
+  header {
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+  }
+}
+
+@media (max-width: 460px) {
+  .column {
+    padding-right: 2rem !important;
+    padding-left: 3rem !important;
+  }
+  header {
+    padding-left: 0 !important;
+  }
+  .text-box-header p {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .column {
+    padding-right: 1 !important;
+    padding-left: 1rem !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

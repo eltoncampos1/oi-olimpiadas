@@ -51,6 +51,14 @@ body {
 }
 
 @font-face {
+    font-family: 'SimplonBP-bold';
+    src: url(../font-face/SimplonBP-Bold.ttf) format('truetype'),
+         url(../font-face/simplonbp-bold.woff) format('woff'),
+         url(../font-face/simplonbp-bold.woff2) format('woff2'),
+         url(../font-face/SimplonBP-Bold.eot) format('embedded-opentype'),
+}
+
+@font-face {
     font-family: 'SimplonBP-light';
     src: url(../font-face/SimplonBP-Light.ttf) format('truetype'),
          url(../font-face/SimplonBP-Light.woff) format('woff'),

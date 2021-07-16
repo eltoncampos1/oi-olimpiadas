@@ -885,3 +885,308 @@ form {
 
     }
 }
+
+
+// ============ result-page ============
+
+.result-page {
+    background-image: url(../imagens/result-bg.png);
+
+    header {
+        align-items: flex-start;
+        padding-top: 12rem;
+        padding-right: 1.5rem;
+        padding-left: 15rem;
+
+    }
+
+    .final-podium {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10.5rem;
+        position: relative;
+
+        .podium-image {
+            max-width: 43rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .ranking-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12.5rem;
+
+
+            .column {   
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+                // max-width: 13.5rem;
+                width: 100%;
+                border-right: 2px solid #000;
+
+                padding-right: 1.5rem;
+                padding-left: 1.5rem;
+
+                &:last-child {
+                    border-right: 2px solid transparent;
+                }
+
+                .medals-wrapper {
+                    display: flex;
+
+
+                    div {
+                        display: flex;
+                        margin-left: 1rem;
+
+                        span {
+                            @include description();
+                            margin-left: .6rem;
+
+                        }
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .place-wrapper {
+            margin-bottom: 2.25rem;
+
+            .ctry {
+               font-family: 'SimplonBP-bold';
+               color: $white;
+               font-size: 1.5rem;
+                line-height: 2.5rem;
+            }
+        }
+
+        .place-1 {
+            position: absolute;
+            font-family: 'SimplonBP-regular';
+            color: $green;
+            font-size: 1.9rem;
+            line-height: 1.9rem;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            top: -10%;
+            left: 41%;
+        }
+
+        .place-2 {
+            position: absolute;
+            font-family: 'SimplonBP-regular';
+            color: $green;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            top: 2%;
+            left: 20%;
+        }
+
+        .place-3 {
+            position: absolute;
+            font-family: 'SimplonBP-regular';
+            color: $green;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            text-transform: uppercase;
+
+            top: 7%;
+            right: 20%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column-reverse;
+
+        .athlete-name {
+            margin-top: 2rem;
+            margin-left: -5rem;
+            
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .text-box-header {
+            margin-left: 5rem;
+        }
+    }
+
+        .place-1 {
+            top: -10%;
+            left: 38% !important;
+        }
+
+        .place-2 {
+            top: 2%;
+            left: 15% !important;
+        }
+
+        .place-3 {
+            top: 7%;
+            right: 15% !important;
+        }
+}
+
+@media (max-width: 700px) {
+        .place-1 {
+            top: -10%;
+            left: 37% !important;
+        }
+
+        .place-2 {
+            top: 2%;
+            left: 11.5% !important;
+        }
+
+        .place-3 {
+            top: 7%;
+            right: 11.5% !important;
+        }
+}
+
+
+@media (max-width: 625px) {
+    .text-box-header{
+        margin-left: 1rem !important;
+    }
+
+    .final-podium {
+        max-width: 32rem;
+        margin: 0 auto;
+    }
+
+    .ctry {
+        font-size: 1.2rem !important;
+    }
+
+    .medals-wrapper span {
+        font-size: 1rem !important;
+        margin-left: .3rem !important;
+    }
+
+    .column {
+        padding-right: .5rem !important;
+        padding-left: .5rem !important;
+    }
+
+    .place-1 {
+        top: -8% !important;
+        left: 37% !important;
+        font-size: 1.3rem !important;
+        line-height: 1.3rem !important;
+    }
+
+    .place-2 {
+        top: 2% !important;
+        left: 7% !important;
+        font-size: 1.1rem !important;
+        line-height: 1.1rem !important;
+    }
+
+    .place-3 {
+        top: 6% !important;
+        right: 9% !important;
+        font-size: 1.1rem !important;
+        line-height: 1.1rem !important;
+    }
+}
+
+@media (max-width: 515px) {
+    main.result-page {
+        background-size: cover !important;
+    }
+
+    .column {
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding-right:3rem !important;
+        padding-left:3rem !important;
+    }
+
+    .medals-wrapper{
+        flex-direction: column;
+
+        div {
+            margin-left: 0 !important;
+            margin-bottom: 1rem !important;
+        }
+    }
+
+    .place-1 {
+        top: -5% !important;
+        left: 37% !important;
+        font-size: 1.3rem !important;
+        line-height: 1.3rem !important;
+    }
+
+    .place-2 {
+        top: .5% !important;
+        left: 7% !important;
+        font-size: 1.1rem !important;
+        line-height: 1.1rem !important;
+    }
+
+    .place-3 {
+        top: 3% !important;
+        right: 9% !important;
+        font-size: 1.1rem !important;
+        line-height: 1.1rem !important;
+    }
+
+    .athlete-name {
+        display: none;
+    }
+
+    header {
+        align-items: flex-end !important;
+    }
+}
+
+@media (max-width: 460px) {
+    .column {
+        padding-right:2rem !important;
+        padding-left:3rem !important;
+    }
+
+    header {
+        padding-left: 0 !important;
+    }
+
+    .text-box-header{
+        p {
+            font-size: 1.3rem !important;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .column {
+        padding-right:1!important;
+        padding-left:1rem !important;
+    }
+}
