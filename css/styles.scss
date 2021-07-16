@@ -721,6 +721,8 @@ form {
             font-size: 1.2rem;
             line-height:1.4rem;
         }
+
+
         p {
             font-size: 1.2rem;
             line-height:1.4rem;
@@ -738,12 +740,19 @@ form {
 
    margin-top: 2rem;
 
+
     h4 {
         @include text(2rem, 2.3rem, $yellow);
     }
 
     p {
+        @include text(1.75rem, 1.7rem, $white);
+        font-family: 'SimplonBP-light';
+    }
+
+    h5 {
         @include text(2rem, 2.3rem, $white);
+        margin-bottom: .7rem;
     }
 }
 
@@ -756,13 +765,16 @@ form {
     }
 
      .message-error {
-        h4 {
-            font-size: 1.5rem;
+            h4 {
+                font-size: 1.5rem;
+            }
+            h5 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
         }
-        p {
-            font-size: 1.5rem;
-        }
-    }
 }
 
 
@@ -770,6 +782,9 @@ form {
 
       .message-error {
         h4 {
+            font-size: 1.3rem;
+        }
+        h5 {
             font-size: 1.3rem;
         }
         p {

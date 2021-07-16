@@ -843,9 +843,18 @@ form {
 
 .message-error p {
   font-family: 'SimplonOI';
+  font-size: 1.75rem;
+  line-height: 1.7rem;
+  color: #fffffe;
+  font-family: 'SimplonBP-light';
+}
+
+.message-error h5 {
+  font-family: 'SimplonOI';
   font-size: 2rem;
   line-height: 2.3rem;
   color: #fffffe;
+  margin-bottom: .7rem;
 }
 
 @media (max-width: 690px) {
@@ -855,6 +864,9 @@ form {
   .message-error h4 {
     font-size: 1.5rem;
   }
+  .message-error h5 {
+    font-size: 1.5rem;
+  }
   .message-error p {
     font-size: 1.5rem;
   }
@@ -862,6 +874,9 @@ form {
 
 @media (max-width: 515px) {
   .message-error h4 {
+    font-size: 1.3rem;
+  }
+  .message-error h5 {
     font-size: 1.3rem;
   }
   .message-error p {
