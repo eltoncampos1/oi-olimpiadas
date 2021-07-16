@@ -57,6 +57,10 @@ body {
   src: url(../font-face/SimplonBP-Medium.ttf) format("truetype"), url(../font-face/simplonbp-medium-webfont.woff) format("woff"), url(../font-face/simplonbp-medium-webfont.woff2) format("woff2"), url(../font-face/SimplonBP-Medium.eot) format("embedded-opentype");
 }
 
+.m-top {
+  margin-top: 10rem;
+}
+
 body {
   background-color: #000300;
 }
@@ -473,7 +477,6 @@ form {
   font-size: 1.25rem;
   line-height: 1.8rem;
   color: #fffffe;
-  text-transform: uppercase;
 }
 
 .cooperator-ranking {
@@ -737,7 +740,7 @@ form {
   height: 100%;
   max-width: 920px;
   margin: 0 auto;
-  background-image: url(../imagens/bg-return-form.png);
+  background-image: url(../imagens/congrats-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -764,13 +767,19 @@ form {
   font-size: 2rem;
   line-height: 2.3rem;
   color: #00d318;
+  margin-bottom: .7rem;
 }
 
 .message p {
   font-family: 'SimplonOI';
-  font-size: 2rem;
-  line-height: 2.3rem;
+  font-size: 1.75rem;
+  line-height: 1.7rem;
   color: #fffffe;
+  font-family: 'SimplonBP-light';
+}
+
+.congrats {
+  margin-bottom: -7rem;
 }
 
 @media (max-width: 690px) {
@@ -795,15 +804,9 @@ form {
 }
 
 @media (max-width: 480px) {
-  .form-return {
-    background-size: 100%;
+  .ranking {
+    background-image: url(../imagens/form-bg-ranking.png);
   }
-  .form-return .ranking {
-    background-image: none;
-  }
-}
-
-@media (max-width: 480px) {
   .message h4 {
     font-size: 1.2rem;
     line-height: 1.4rem;
@@ -869,9 +872,6 @@ form {
 @media (max-width: 480px) {
   .form-return {
     background-size: 100%;
-  }
-  .form-return .ranking {
-    background-image: none;
   }
 }
 

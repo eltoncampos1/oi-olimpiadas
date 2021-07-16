@@ -366,7 +366,6 @@ form {
         line-height: 1.8rem;
         
         color: $white;
-        text-transform: uppercase;
     }
 }
 
@@ -650,7 +649,7 @@ form {
     max-width: 920px;
     margin: 0 auto;
 
-    background-image: url(../imagens/bg-return-form.png);
+    background-image: url(../imagens/congrats-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -665,12 +664,18 @@ form {
 
     h4 {
         @include text(2rem, 2.3rem, $green);
+        margin-bottom: .7rem;
     }
 
     p {
-        @include text(2rem, 2.3rem, $white);
+        @include text(1.75rem, 1.7rem, $white);
+        font-family: 'SimplonBP-light';
     }
 
+}
+
+.congrats {
+    margin-bottom: -7rem;
 }
 
 
@@ -706,17 +711,11 @@ form {
 
 
 @media (max-width: 480px) {
-    .form-return {
-        background-size: 100%;
 
-
-        .ranking {
-            background-image: none;
+        .ranking{
+            background-image: url(../imagens/form-bg-ranking.png);
         }
-    }
-}
 
-@media (max-width: 480px) {
         .message {
         h4 {
             font-size: 1.2rem;
@@ -785,9 +784,9 @@ form {
         background-size: 100%;
 
 
-        .ranking {
-            background-image: none;
-        }
+        // .ranking.congrats-bg {
+        //     background-image: none;
+        // }
     }
 }
 
