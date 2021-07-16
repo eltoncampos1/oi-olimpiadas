@@ -118,7 +118,6 @@ header {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #fffffe;
-  padding-left: 2rem;
   margin-top: 1.25rem;
 }
 
@@ -262,24 +261,31 @@ form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flag {
-  width: 62px;
-  height: 62px;
+  width: 60px;
+  height: 40px;
   position: relative;
+  background-color: #04190A;
   border: 1px solid #00d318;
-  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-right: 2.25rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   -webkit-box-shadow: 0px 0px 170px 0.5px #00d318;
           box-shadow: 0px 0px 170px 0.5px #00d318;
 }
 
 .flag img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .flag .place {
@@ -297,8 +303,8 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: -15%;
-  right: -10px;
+  top: -65%;
+  right: -15px;
   color: #fffffe;
   font-family: 'SimplonOi';
   font-size: 1.3rem;
@@ -474,7 +480,7 @@ form {
   font-size: 2.5rem;
   line-height: 2.5rem;
   color: #ffff00;
-  margin-left: -2rem;
+  margin-bottom: .7rem;
 }
 
 .ranking-description p {
@@ -499,6 +505,7 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .cooperator-ranking ul li {
@@ -560,6 +567,12 @@ form {
 .cooperator-ranking ul li:hover {
   -webkit-box-shadow: 0px 0px 5px #00d318;
           box-shadow: 0px 0px 5px #00d318;
+}
+
+.obs {
+  color: #fffffe;
+  font-family: 'SimplonBP-light';
+  width: 1rem;
 }
 
 @media (max-width: 768px) {

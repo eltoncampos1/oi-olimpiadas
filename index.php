@@ -267,6 +267,9 @@ $paises = $db->recuperar();
                             Nome do colaborador
                         </li>
                     </ul>
+                    <span class="obs">
+                        *A atualização é feita todo dia pela manhã.
+                    </span>
                 </div>
             </div>
         </section>

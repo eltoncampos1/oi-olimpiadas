@@ -45,7 +45,6 @@ header {
 
     p {
         @include description();
-        padding-left: 2rem;
         margin-top: 1.25rem;
     }
 }
@@ -167,21 +166,24 @@ form {
 .change-country {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .flag{
-    width: 62px;
-    height: 62px;
+    width: 60px;
+    height: 40px;
     position: relative;
+    background-color: #04190A;
     border: 1px solid $green;
-    border-radius: 50%;
     display: flex;
     margin-right: 2.25rem;
+    align-self: flex-end;
 
     box-shadow: 0px 0px 170px .5px $green;
 
     img {
         width: 100%;
+        object-fit: cover;
     }
 
     .place {
@@ -193,8 +195,8 @@ form {
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: -15%;
-        right: -10px;
+        top: -65%;
+        right: -15px;
         color: $white;
         font-family: 'SimplonOi';
         font-size: 1.3rem;
@@ -357,7 +359,7 @@ form {
 
     h1 {
         @include text(2.5rem, 2.5rem, $yellow);
-        margin-left: -2rem;
+        margin-bottom: .7rem;
     }
 
     p {
@@ -380,6 +382,7 @@ form {
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-bottom: 1.5rem;
 
         li {
             color: $green;
@@ -435,6 +438,12 @@ form {
             }
         }
     }
+}
+
+.obs {
+    color: $white;
+    font-family: 'SimplonBP-light';
+    width: 1rem;
 }
 
 
