@@ -900,4 +900,53 @@ form {
     line-height: 1.4rem;
   }
 }
+
+.ranking-bg {
+  background-image: url(../imagens/deadline-bg.png);
+  background-size: cover;
+}
+
+.ranking-bg .deadline {
+  margin-top: 5rem;
+}
+
+.ranking-bg header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 1rem;
+}
+
+@media (max-width: 690px) {
+  .ranking-bg {
+    background-image: url(../imagens/deadline-bg.png);
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+  .ranking-bg .ranking {
+    background-image: none;
+  }
+  .ranking-bg .deadline {
+    margin-top: 5rem;
+  }
+  .ranking-bg .athlete-name {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 515px) {
+  .ranking-bg {
+    background-image: url(../imagens/deadline-bg.png);
+  }
+}
+
+@media (max-width: 425px) {
+  .ranking-bg .ranking {
+    background-image: none;
+  }
+  .ranking-bg .deadline {
+    margin-top: 5rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
