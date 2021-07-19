@@ -1,3 +1,18 @@
+<?php
+
+require_once './class/conexao.php';
+require_once './class/palpite.php';
+require_once './class/bd.php';
+
+$conexao = new Conexao();
+$palpite = new Palpite();
+
+$db = new BD($conexao, $palpite);
+
+$jogadores = $db->pesquisaPodio();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <title>Document</title>
 </head>
 
@@ -60,37 +75,26 @@
                 </div>
 
                 <div class="cooperator-ranking">
-                    <ul>
-                        <li>
-                            <div class="pod">
-                                <span>1°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
-                        <li>
-                            <div class="pod">
-                                <span>2°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
-                        <li>
-                            <div class="pod">
-                                <span>3°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
-                        <li>
-                            <div>
-                                <span> 4°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
-                        <li>
-                            <div>
-                                <span>5°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
+                <ul>
+                        <?php
+                        $posicao = 0;
+                        foreach ($jogadores as $idx => $jogador) {
+                            $class = 'pod';
+                            if ($posicao == 3 || $posicao == 4) {
+                                $class = '';
+                            }
+                            $posicao++;
+                        ?>
+
+                            <li>
+                                <div class="<?= $class ?>">
+                                    <span><?= $posicao ?>°</span>
+                                </div>
+                                <?= $jogador->nome ?>
+                            </li>
+                        <?php
+
+                        } ?>
                     </ul>
 
                     <span class="obs">

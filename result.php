@@ -1,3 +1,21 @@
+<?php
+
+require_once './class/conexao.php';
+require_once './class/palpite.php';
+require_once './class/bd.php';
+
+global $pais1, $pais2, $pais3;
+
+$conexao = new Conexao();
+$palpite = new Palpite();
+
+$db = new BD($conexao, $palpite);
+
+$paises = $db->pesquisaPaises();
+$jogadores = $db->pesquisaPodio();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

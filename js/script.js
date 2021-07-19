@@ -1,6 +1,6 @@
 $(document).ready(() => {
-    
-    
+
+
     $('#btn-enviar').on('click', e => {
 
         e.preventDefault
@@ -29,32 +29,59 @@ $(document).ready(() => {
             && dados.primaryPais != '' && dados.primaryGold != '' && dados.primarySilver != '' && dados.primaryBronze != ''
             && dados.secondaryPais != '' && dados.secondaryGold != '' && dados.secondarySilver != '' && dados.secondaryBronze != ''
             && dados.tertiaryPais != '' && dados.tertiaryGold != '' && dados.tertiarySilver != '' && dados.tertiaryBronze != '') {
-            
+
             if (dados.email.includes('@')) {
 
-                if(dados.primaryPais === dados.secondaryPais || dados.secondaryPais === dados.tertiaryPais || dados.tertiaryPais ===dados.primaryPais ){
-                    alert('Os países selecionado são iguais, aumente sua chanse de ganhar escolhendo países diferente')
+                if (dados.primaryPais != dados.secondaryPais && dados.secondaryPais != dados.tertiaryPais && dados.tertiaryPais != dados.primaryPais) {
+                    $("#btn-enviar").html("ENVIANDO AGUARDE...").attr("disabled");
+                    setTimeout(() => {
+                        $.ajax({
+
+                            type: 'POST',
+                            url: 'controller_app.php',
+                            data: dados,
+                            dataType: 'json',
+                            success: dados => {
+                                console.log(dados.email)
+                                if (dados.email) {
+                                    console.log('entrou aqui')
+                                    window.location.href = "http://localhost/oi-olimpiadas/error.php";
+                                }
+                            },
+                            error: erro => {
+                                console.log(erro)
+                                window.location.href = "http://localhost/oi-olimpiadas/congrats.php";
+                            }
+                        })
+
+                        $('#nome').val("");
+                        $('#email').val("");
+                        $('#primary-pais option:selected').val("");
+                        $('#primary-gold').val("");
+                        $('#primary-silver').val("");
+                        $('#primary-bronze').val("");
+                        $('#secondary-pais option:selected').val("");
+                        $('#secondary-gold').val("");
+                        $('#secondary-silver').val("");
+                        $('#secondary-bronze').val("");
+                        $('#tertiary-pais option:selected').val("");
+                        $('#tertiary-gold').val("");
+                        $('#tertiary-silver').val("");
+                        $('#tertiary-bronze').val("");
+
+                    }, 4000)
+
+                } else {
+                    alert('Os países selecionado são iguais, por favor informe países diferentes')
                 }
-
-                $.ajax({
-
-                    type: 'POST',
-                    url: 'controller_app.php',
-                    data: dados,
-                    dataType: 'json',
-                    success: dados => { console.log(dados) },
-                    error: erro => { console.log(erro) }
-                })
-
-
             } else {
 
-                alert('Por favor preencher com um email valido')
+                alert('Por favor preencher com um e-mail valido')
             }
 
         }
         else {
-            alert("por favor preencher o campo!");
+            alert("por favor preencher todos campo!");
         }
     })
 

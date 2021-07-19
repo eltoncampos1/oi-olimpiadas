@@ -4,15 +4,15 @@ class Palpite
 {
     private $nome;
     private $email;
-    private $primeiroPais;
+    private $idPrimeiroPais;
     private $primeroOuro;
     private $primeiraPrata;
     private $primeiroBronze;
-    private $segundoPais;
+    private $idSegundoPais;
     private $segundoOuro;
     private $segundaPrata;
     private $segundoBronze;
-    private $terceiroPais;
+    private $idTerceiroPais;
     private $terceiroOuro;
     private $terceiraPrata;
     private $terceiroBronze;
@@ -32,9 +32,9 @@ class Palpite
     {
         if (
             empty($this->nome) || empty($this->email) ||
-            empty($this->primeiroPais) || empty($this->primeroOuro) || empty($this->primeiraPrata) || empty($this->primeiroBronze) ||
-            empty($this->segundoPais) || empty($this->segundoOuro) || empty($this->segundaPrata) || empty($this->segundoBronze) ||
-            empty($this->terceiroPais) || empty($this->terceiroOuro) || empty($this->terceiraPrata) || empty($this->terceiroBronze)
+            empty($this->idPrimeiroPais) || empty($this->primeroOuro) || empty($this->primeiraPrata) || empty($this->primeiroBronze) ||
+            empty($this->idSegundoPais) || empty($this->segundoOuro) || empty($this->segundaPrata) || empty($this->segundoBronze) ||
+            empty($this->idTerceiroPais) || empty($this->terceiroOuro) || empty($this->terceiraPrata) || empty($this->terceiroBronze)
         ) {
             return false;
         }

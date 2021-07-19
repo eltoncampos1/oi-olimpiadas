@@ -11,7 +11,8 @@ $palpite = new Palpite();
 
 $db = new BD($conexao, $palpite);
 
-$paises = $db->recuperar();
+$paises = $db->pesquisaPaises();
+$jogadores = $db->pesquisaPodio();
 
 ?>
 
@@ -90,7 +91,7 @@ $paises = $db->recuperar();
                                         <?php
                                         foreach ($paises as $index => $pais) { ?>
 
-                                            <option value="<?php echo $pais->url_imagem ?>"><?php echo $pais->nome ?></option>
+                                            <option value='<?php echo ($pais->id . ',' . $pais->url_imagem)  ?>'><?php echo $pais->nome ?></option>
 
                                         <?php
                                         }
@@ -135,10 +136,10 @@ $paises = $db->recuperar();
                                 <div>
                                     <img class="triangle" src="imagens/triangle.png" alt="triangle">
                                     <select name="país" id="secondary-pais" onchange="segundaImg(this.value)">
-                                        <option value="brasil">Escolha um pais</option>
+                                        <option value="">Escolha um pais</option>
                                         <?php
                                         foreach ($paises as $index => $pais) { ?>
-                                            <option value="<?php echo $pais->url_imagem ?>"><?php echo $pais->nome ?></option>
+                                            <option value='<?php echo ($pais->id . ',' . $pais->url_imagem)  ?>'><?php echo $pais->nome ?></option>
                                         <?php
                                         }
                                         ?>
@@ -178,10 +179,10 @@ $paises = $db->recuperar();
                                 <div>
                                     <img class="triangle" src="imagens/triangle.png" alt="triangle">
                                     <select name="país" id="tertiary-pais" onchange="terceiraImg(this.value)">
-                                        <option value="brasil">Escolha um pais</option>
+                                        <option value="">Escolha um pais</option>
                                         <?php
                                         foreach ($paises as $index => $pais) { ?>
-                                            <option value="<?php echo $pais->url_imagem ?>"><?php echo $pais->nome ?></option>
+                                            <option value='<?php echo ($pais->id . ',' . $pais->url_imagem)  ?>'><?php echo $pais->nome ?></option>
                                         <?php
                                         }
                                         ?>
@@ -236,36 +237,27 @@ $paises = $db->recuperar();
 
                 <div class="cooperator-ranking">
                     <ul>
-                        <li>
-                            <div class="pod">
-                                <span>1°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
-                        <li>
-                            <div class="pod">
-                                <span>2°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
-                        <li>
-                            <div class="pod">
-                                <span>3°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
-                        <li>
-                            <div>
-                                <span> 4°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
-                        <li>
-                            <div>
-                                <span>5°</span>
-                            </div>
-                            Nome do colaborador
-                        </li>
+                        <?php
+                        $posicao = 0;
+                        foreach ($jogadores as $idx => $jogador) {
+                            $class = 'pod';
+                            if ($posicao == 3 || $posicao == 4) {
+                                $class = '';
+                            }
+                            $posicao++;
+                        ?>
+
+                            <li>
+                                <div class="<?= $class ?>">
+                                    <span><?= $posicao ?>°</span>
+                                </div>
+                                <?= $jogador->nome ?>
+                            </li>
+                        <?php
+
+                        } ?>
+
+
                     </ul>
                     <span class="obs">
                         *A atualização é feita todo dia pela manhã.
@@ -277,15 +269,18 @@ $paises = $db->recuperar();
 </body>
 <script>
     function primeiraImg(value) {
-        document.getElementById("bandeira1").src = value;
+        var arr = value.split(',')
+        document.getElementById("bandeira1").src = arr[1];
     }
 
     function segundaImg(value) {
-        document.getElementById("bandeira2").src = value;
+        var arr = value.split(',')
+        document.getElementById("bandeira2").src = arr[1];
     }
 
     function terceiraImg(value) {
-        document.getElementById("bandeira3").src = value;
+        var arr = value.split(',')
+        document.getElementById("bandeira3").src = arr[1];
     }
 </script>
 
