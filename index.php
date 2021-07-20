@@ -267,7 +267,23 @@ $jogadores = $db->pesquisaPodio();
         </section>
     </main>
 
-    <div class="modal fade" id="modal-preencherCampos" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal fade" id="modal-email-valido" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " style="right: -4%;" role="document">
+            <div class="box-modal-sucesso">
+                <div tabindex="-1" role="dialog">
+                    <div id="modal-error" class="modal-error">
+                        <div class="btn-sair">X</div>
+                        <h1>Atenção!</h1>
+                        <span class="infos">Volte ao formulário e corrija as informaçõs abaixo:</span>
+
+                        <p><span>X </span> Insira um <strong>e-mail válido.</strong></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-campos-vazios" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered " style="right: -4%;" role="document">
             <div class="box-modal-sucesso">
                 <div tabindex="-1" role="dialog">
@@ -277,8 +293,22 @@ $jogadores = $db->pesquisaPodio();
                         <span class="infos">Volte ao formulário e corrija as informaçõs abaixo:</span>
 
                         <p><span>X </span> Preencha <strong>Todos os campos </strong>do formulário.</p>
-                        <p><span>X </span> Insira um <strong>e-mail válido.</strong></p>
-                        <p><span>X </span> Preencha com <strong>3 países diferentes.</strong></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-paises-diferentes" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " style="right: -4%;" role="document">
+            <div class="box-modal-sucesso">
+                <div tabindex="-1" role="dialog">
+                    <div id="modal-error" class="modal-error">
+                        <div class="btn-sair">X</div>
+                        <h1>Atenção!</h1>
+                        <span class="infos">Volte ao formulário e corrija as informaçõs abaixo:</span>
+
+                        <p><span>x </span> Preencha com <strong>3 países diferentes.</strong></p>
                     </div>
                 </div>
             </div>

@@ -267,11 +267,11 @@ form {
 }
 
 .flag {
-  width: 64px;
+  width: 60px;
   height: 40px;
   position: relative;
   background-color: #04190A;
-  /* border: 1px solid #00d318; */
+  border: 1px solid #00d318;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -562,11 +562,6 @@ form {
   font-size: 1.125rem;
   margin-left: .3rem;
   margin-top: .2rem;
-}
-
-.cooperator-ranking ul li:hover {
-  -webkit-box-shadow: 0px 0px 5px #00d318;
-          box-shadow: 0px 0px 5px #00d318;
 }
 
 .obs {
@@ -969,11 +964,11 @@ form {
 }
 
 .modal-error {
-  max-width: 550px;
+  max-width: 575px;
   width: 100%;
   background-color: #031f03;
   border-radius: 7px;
-  padding: 1rem;
+  padding: 1.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -988,7 +983,7 @@ form {
 }
 
 .modal-error h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #00d318;
   margin-bottom: .3rem;
   font-family: 'SimplonOI';
@@ -996,6 +991,9 @@ form {
 
 .modal-error span {
   color: #00d318;
+  font-family: 'SimplonOI';
+  font-size: .8rem;
+  margin-right: .5rem;
 }
 
 .modal-error .infos {
@@ -1007,7 +1005,12 @@ form {
 .modal-error p {
   color: #fffffe;
   margin-bottom: .7rem;
-  font-family: 'SimplonBP-regular';
+  font-family: 'SimplonBP-light';
+  font-size: 1.125rem;
+}
+
+.modal-error p strong {
+  font-family: 'SimplonBP-medium';
 }
 
 .modal-error .btn-sair {
@@ -1031,6 +1034,10 @@ form {
   right: -10px;
   -webkit-box-shadow: 0px 0px 15px #00d318;
           box-shadow: 0px 0px 15px #00d318;
+}
+
+.modal-error .btn-sair span {
+  font-size: 1.4rem;
 }
 
 .result-page {

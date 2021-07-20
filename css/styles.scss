@@ -432,10 +432,6 @@ form {
                 margin-left: .3rem;
                 margin-top: .2rem;
             }
-
-            &:hover {
-                box-shadow: 0px 0px 5px $green;
-            }
         }
     }
 }
@@ -895,18 +891,18 @@ form {
     }
 }
 .modal-error {
-    max-width: 550px;
+    max-width: 575px;
     width: 100%;
     background-color: rgb(3, 31, 3);
     border-radius: 7px;
-    padding: 1rem;
+    padding: 1.8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: $green;
         margin-bottom: .3rem;
         font-family: 'SimplonOI';
@@ -914,6 +910,9 @@ form {
 
     span {
         color: $green;
+        font-family: 'SimplonOI';
+        font-size: .8rem;
+        margin-right: .5rem;
     }
 
     .infos {
@@ -925,7 +924,12 @@ form {
     p {
         color: $white;
         margin-bottom: .7rem;
-          font-family: 'SimplonBP-regular';
+        font-family: 'SimplonBP-light';
+        font-size: 1.125rem;
+
+        strong {
+            font-family: 'SimplonBP-medium';
+        }
     }
 
 
@@ -944,6 +948,10 @@ form {
         top: -15px;
         right: -10px;
         box-shadow: 0px 0px 15px $green;
+
+        span {
+            font-size: 1.4rem;
+        }
     }
     
 }
