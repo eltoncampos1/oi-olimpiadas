@@ -77,7 +77,7 @@ $jogadores = $db->pesquisaPodio();
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">1</div>
-                                <img src="imagens/default.png" id="bandeira1" alt="bandeira">
+                                <img src="imagens/def.png" id="bandeira1" alt="bandeira">
                             </div>
 
                             <div class="select">
@@ -128,7 +128,7 @@ $jogadores = $db->pesquisaPodio();
                                 <div class="place">
                                     2
                                 </div>
-                                <img src="imagens/default.png" id="bandeira2" alt="bandeira">
+                                <img src="imagens/def.png" id="bandeira2" alt="bandeira">
                             </div>
 
                             <div class="select">
@@ -171,7 +171,7 @@ $jogadores = $db->pesquisaPodio();
                         <div class="change-country">
                             <div class="flag">
                                 <div class="place">3</div>
-                                <img src="imagens/default.png" id="bandeira3" alt="bandeira">
+                                <img src="imagens/def.png" id="bandeira3" alt="bandeira">
                             </div>
 
                             <div class="select">

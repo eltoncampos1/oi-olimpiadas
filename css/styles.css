@@ -267,11 +267,10 @@ form {
 }
 
 .flag {
-  width: 60px;
+  width: 72px;
   height: 40px;
   position: relative;
   background-color: #04190A;
-  border: 1px solid #00d318;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -283,9 +282,14 @@ form {
 }
 
 .flag img {
-  width: 100%;
+  width: 110%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+  left: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 170px 0.5px #00d318;
+          box-shadow: 0px 0px 170px 0.5px #00d318;
 }
 
 .flag .place {
@@ -308,6 +312,7 @@ form {
   color: #fffffe;
   font-family: 'SimplonOi';
   font-size: 1.3rem;
+  z-index: 10;
   -webkit-box-shadow: 0px 0px 10px #00d318;
           box-shadow: 0px 0px 10px #00d318;
 }
