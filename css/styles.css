@@ -97,6 +97,10 @@ header {
   padding-bottom: 10.5rem;
 }
 
+header .athlete-name {
+  margin-bottom: -4rem;
+}
+
 .text-box-header {
   max-width: 310px;
   width: 100%;
@@ -806,6 +810,20 @@ form {
   margin-bottom: -14rem;
 }
 
+.home-athelete {
+  margin-bottom: -12rem;
+}
+
+.ranking-athlete {
+  margin-top: -5rem;
+  width: 150px;
+}
+
+.ranking-athlete h1 {
+  font-size: 1.1rem !important;
+  line-height: 1.3rem;
+}
+
 @media (max-width: 690px) {
   .form-return {
     background-image: url(../imagens/bg-mobile3.png);
@@ -928,7 +946,6 @@ form {
 .ranking-bg {
   background-image: url(../imagens/deadline-bg.png);
   background-size: cover;
-  padding-bottom: 10rem;
 }
 
 .ranking-bg .deadline {

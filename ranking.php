@@ -41,7 +41,7 @@ $jogadores = $db->pesquisaPodio();
                 </p>
             </div>
 
-            <div class="athlete-name ">
+            <div class="athlete-name ranking-athlete">
                 <h1>
                     Italo Ferreira, <br>
                     <span>Atleta de fibra</span>
