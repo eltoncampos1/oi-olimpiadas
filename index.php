@@ -49,7 +49,7 @@ $jogadores = $db->pesquisaPodio();
 
             <div class="athlete-name">
                 <h1>
-                    Medina, <br>
+                    Gabriel Medina, <br>
                     <span>Atleta de fibra</span>
                 </h1>
             </div>

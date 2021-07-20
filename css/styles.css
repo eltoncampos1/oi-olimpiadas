@@ -795,7 +795,15 @@ form {
 }
 
 .congrats {
-  margin-bottom: -7rem;
+  margin-bottom: -20rem;
+}
+
+.error-athelete {
+  margin-bottom: -16rem;
+}
+
+.ranking-athelete {
+  margin-bottom: -14rem;
 }
 
 @media (max-width: 690px) {
@@ -920,6 +928,7 @@ form {
 .ranking-bg {
   background-image: url(../imagens/deadline-bg.png);
   background-size: cover;
+  padding-bottom: 10rem;
 }
 
 .ranking-bg .deadline {

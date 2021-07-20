@@ -39,7 +39,7 @@ $jogadores = $db->pesquisaPodio();
 
             <div class="athlete-name">
                 <h1>
-                    Medina, <br>
+                    gabriel Medina, <br>
                     <span>Atleta de fibra</span>
                 </h1>
             </div>
@@ -59,7 +59,7 @@ $jogadores = $db->pesquisaPodio();
         <section class="ranking congrats-bg">
             <div class="athlete-name footer congrats">
                 <h1>
-                    Leticia, <br>
+                    Leticia Bufoni, <br>
                     <span>Atleta de fibra</span>
                 </h1>
             </div>

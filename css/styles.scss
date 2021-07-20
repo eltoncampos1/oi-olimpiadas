@@ -350,6 +350,7 @@ form {
         align-self: center;
         margin-left: 6rem;
         margin-top: 5rem;
+
         h1 {
             font-size: 1.1rem;
             line-height: 1.1rem;
@@ -685,7 +686,15 @@ form {
 }
 
 .congrats {
-    margin-bottom: -7rem;
+    margin-bottom: -20rem;
+}
+
+.error-athelete {
+    margin-bottom: -16rem;
+}
+
+.ranking-athelete {
+    margin-bottom: -14rem;
 }
 
 
@@ -834,7 +843,7 @@ form {
 .ranking-bg {
     background-image: url(../imagens/deadline-bg.png);
     background-size: cover;
-
+    padding-bottom: 10rem;
     .deadline {
         margin-top: 5rem;
     }
