@@ -25,7 +25,6 @@ $jogadores = $db->pesquisaPodio();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
-    <title>Document</title>
 </head>
 
 <body>
@@ -67,7 +66,7 @@ $jogadores = $db->pesquisaPodio();
                 </div>
 
                 <div class="cooperator-ranking">
-                <ul>
+                    <ul>
                         <?php
                         $posicao = 0;
                         foreach ($jogadores as $idx => $jogador) {
