@@ -4,8 +4,6 @@ require_once './class/conexao.php';
 require_once './class/palpite.php';
 require_once './class/bd.php';
 
-global $pais1, $pais2, $pais3;
-
 $conexao = new Conexao();
 $palpite = new Palpite();
 
@@ -27,40 +25,39 @@ function calculaPontuacao($aposta, $pais){
     return $pontuacao;
 }
 
+$pontuacaoTotal = 0;
 
-var_dump(calculaPontuacao(9,12));
-
-
-
-foreach($paises as $i => $pais){
-    echo '<pre>';
-    var_dump($pais);
+foreach($jogadores as $index => $jogador){
+    
+    echo'dados do jogador';
+    echo'<pre>';
+    print_r($jogador->id_pais);
     echo '</pre>';
-    $total_medalhas = $pais->medalhaOuro + $pais->medalhaPrata + $pais->medalhaBronze; 
-    var_dump($total_medalhas .'funcao');
+    echo '<hr>';
+    echo '<hr>';
+    echo '<hr>';
+
+    foreach($paises as $idx => $pais){
+        echo'<pre>';
+        print_r($pais);
+        echo '</pre>';
+        if($jogador->id_pais === $pais->id){
+           
+            echo'esse jogador apostou nesse país'; 
+            $totalOuro = calculaPontuacao($jogador->aposta_ouro, $pais->medalhaOuro );
+            $totalPrata = calculaPontuacao($jogador->aposta_prata, $pais->medalhaPrata );
+            $totalBronze = calculaPontuacao($jogador->aposta_bronze, $pais->medalhaBronze );
+            $pontuacaoGeral = $totalOuro + $totalPrata + $totalBronze;
+            echo'=======================';
+            echo $pontuacaoGeral . '<br>';
+            echo $jogador->id;
+            echo'=======================';
+            $palpite->__set('id', $jogador->id);
+            $palpite->__set('pontuacaoGeral', $pontuacaoGeral);
+            $palpite->__set('email', $jogador->email);            
+            
+            $db->inseriPontuacao();
+        }
+    }
+
 }
-
-
-
-// foreach($jogadores as $index => $jogador){
-//     // echo '<pre>';
-//     // var_dump($jogador->aposta_ouro, $jogador->aposta_prata, $jogador->aposta_bronze, $jogador->pontuacao_geral);
-//     // echo '</pre>';
-//     // echo '<hr>';
-//     foreach($paises as $idx => $pais){
-//         // echo '<pre>';
-//         // var_dump($pais->medalhaOuro);
-//         // echo '</pre>';
-
-//         // var_dump('Pontuação é: ' . calculaPontuacao($jogador->aposta_ouro,$pais->medalhaOuro));
-//         // var_dump('Pontuação é: ' . calculaPontuacao($jogador->aposta_prata,$pais->medalhaPrata));
-//         // var_dump('Pontuação é: ' . calculaPontuacao($jogador->aposta_bronze,$pais->medalhaBronze));
-
-//         var_dump($total_medalhas = calculaPontuacao($jogador->aposta_ouro,$pais->medalhaOuro) + calculaPontuacao($jogador->aposta_prata,$pais->medalhaPrata) + calculaPontuacao($jogador->aposta_bronze,$pais->medalhaBronze));
-
-//     }
-    
-    
-//     var_dump($total_medalhas);
-
-// }

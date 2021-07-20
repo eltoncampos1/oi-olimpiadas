@@ -28,7 +28,7 @@ class BD
     }
 
     public function pesquisaJogadores(){
-        $query = "select * from tb_jogadores group by email limit 5";
+        $query = "select * from tb_jogadores";
         $stmt = $this->conexao->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -70,6 +70,15 @@ class BD
         $stmt->bindValue(':terceiro_aposta_prata', $this->palpite->__get('terceiraPrata'));
         $stmt->bindValue(':terceiro_aposta_bronze', $this->palpite->__get('terceiroBronze'));
 
+        $stmt->execute();
+    }
+
+    public function inseriPontuacao(){
+        $query = "update tb_jogadores set pontuacao_geral = :totalPontos where email = :email and id = :id ";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bindValue(':totalPontos', $this->palpite->__get('pontuacaoGeral'));
+        $stmt->bindValue(':email', $this->palpite->__get('email'));
+        $stmt->bindValue(':id', $this->palpite->__get('id'));        
         $stmt->execute();
     }
 }

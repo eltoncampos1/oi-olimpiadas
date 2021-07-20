@@ -2,6 +2,7 @@
 
 class Palpite
 {
+    private $id;
     private $nome;
     private $email;
     private $idPrimeiroPais;
@@ -16,6 +17,7 @@ class Palpite
     private $terceiroOuro;
     private $terceiraPrata;
     private $terceiroBronze;
+    private $pontuacaoGeral;
 
 
     public function __get($attr)
