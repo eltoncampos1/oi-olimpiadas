@@ -2,7 +2,7 @@
 class Conexao
 {
     private $host   = 'localhost';
-    private $dbName = 'bolaooibd';
+    private $dbName = 'bolaoOIbd';
     private $user   =  'root';
     private $pass   =  '';
 

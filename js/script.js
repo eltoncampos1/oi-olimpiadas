@@ -72,16 +72,17 @@ $(document).ready(() => {
                     }, 4000)
 
                 } else {
-                    alert('Os países selecionado são iguais, por favor informe países diferentes')
+                    $('#modal-preencherCampos').modal('show');
                 }
             } else {
 
-                alert('Por favor preencher com um e-mail valido')
+                $('#modal-preencherCampos').modal('show');
             }
 
         }
         else {
-            alert("por favor preencher todos campo!");
+
+            $('#modal-preencherCampos').modal('show');
         }
     })
 

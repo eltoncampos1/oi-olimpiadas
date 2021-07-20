@@ -30,8 +30,8 @@ $jogadores = $db->pesquisaPodio();
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
-    <link rel="shortcut icon" href="./imagens/logo.svg" type="image/svg">
-    <title>Bolão - OI</title>
+    <link rel="shortcut icon" href="./imagens/logo.png" type="image/svg">
+    <title>Bolão Oi</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@ $jogadores = $db->pesquisaPodio();
                 </h1>
 
                 <p>
-                    Enquanto nossos atletas vão disputar a maior competição do mundo, você está convocado pra participar do nosso bolão. Tudo o que precisa fazer é montar o seu ranking com os países e as respectivas medalhas. Depois é só torcer pra que seu palpite esteja certo.
+                    Enquanto nossos atletas vão disputar a maior competição do mundo, você está convocado pra participar do nosso bolão. Tudo o que precisa fazer é montar o seu ranking com os países e as respectivas medalhas. Depois é só torcer pra que seu palpite esteja certo.
                 </p>
             </div>
 
@@ -266,21 +266,54 @@ $jogadores = $db->pesquisaPodio();
             </div>
         </section>
     </main>
+
+    <div class="modal fade" id="modal-preencherCampos" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " style="right: -4%;" role="document">
+            <div class="box-modal-sucesso">
+                <div tabindex="-1" role="dialog">
+                    <div id="modal-error" class="modal-error">
+                        <div class="btn-sair">X</div>
+                        <h1>Atenção!</h1>
+                        <span class="infos">Volte ao formulário e corrija as informaçõs abaixo:</span>
+
+                        <p><span>X </span> Preencha <strong>Todos os campos </strong>do formulário.</p>
+                        <p><span>X </span> Insira um <strong>e-mail válido.</strong></p>
+                        <p><span>X </span> Preencha com <strong>3 países diferentes.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 <script>
     function primeiraImg(value) {
         var arr = value.split(',')
-        document.getElementById("bandeira1").src = arr[1];
+        if (value === '') {
+            document.getElementById("bandeira1").src = 'imagens/default.png';
+        } else {
+            document.getElementById("bandeira1").src = arr[1];
+        }
+
     }
 
     function segundaImg(value) {
         var arr = value.split(',')
-        document.getElementById("bandeira2").src = arr[1];
+        if (value === '') {
+            document.getElementById("bandeira2").src = 'imagens/default.png';
+        } else {
+            document.getElementById("bandeira2").src = arr[1];
+        }
     }
 
     function terceiraImg(value) {
         var arr = value.split(',')
-        document.getElementById("bandeira3").src = arr[1];
+        if (value === '') {
+            document.getElementById("bandeira3").src = 'imagens/default.png';
+        } else {
+            document.getElementById("bandeira3").src = arr[1];
+        }
     }
 </script>
 
