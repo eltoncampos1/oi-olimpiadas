@@ -277,8 +277,8 @@ form {
   margin-right: 2.25rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  -webkit-box-shadow: 0px 0px 170px 0.5px #00d318;
-          box-shadow: 0px 0px 170px 0.5px #00d318;
+  -webkit-box-shadow: 0px 0px 140px 0.5px #00d318;
+          box-shadow: 0px 0px 140px 0.5px #00d318;
 }
 
 .flag img {
@@ -288,8 +288,6 @@ form {
   position: relative;
   left: 0;
   z-index: 1;
-  -webkit-box-shadow: 0px 0px 170px 0.5px #00d318;
-          box-shadow: 0px 0px 170px 0.5px #00d318;
 }
 
 .flag .place {
